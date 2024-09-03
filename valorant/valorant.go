@@ -46,10 +46,10 @@ type Client struct {
 	common service
 
 	// Services used for talking to different parts of the Valorant API.
-	ContentService *ContentService
-	MatchService   *MatchService
-	RankedService  *RankedService
-	StatusService  *StatusService
+	Content *ContentService
+	Match   *MatchService
+	Ranked  *RankedService
+	Status  *StatusService
 }
 
 func (c *Client) Client() *http.Client {
@@ -117,10 +117,10 @@ func (c *Client) initialize() {
 		c.UserAgent = defaultUserAgent
 	}
 	c.common.client = c
-	c.ContentService = (*ContentService)(&c.common)
-	c.MatchService = (*MatchService)(&c.common)
-	c.RankedService = (*RankedService)(&c.common)
-	c.StatusService = (*StatusService)(&c.common)
+	c.Content = (*ContentService)(&c.common)
+	c.Match = (*MatchService)(&c.common)
+	c.Ranked = (*RankedService)(&c.common)
+	c.Status = (*StatusService)(&c.common)
 }
 
 // RequestOption represents an option that can modify a http.Request.
