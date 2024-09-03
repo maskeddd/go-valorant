@@ -16,9 +16,9 @@ import (
 )
 
 const (
-	Version          = "0.1.0"
+	Version          = "v0.1.0"
 	defaultBaseURL   = "https://na.api.riotgames.com/val/"
-	defaultUserAgent = "go-quaver" + "/" + Version
+	defaultUserAgent = "go-valorant" + "/" + Version
 )
 
 type Region string
